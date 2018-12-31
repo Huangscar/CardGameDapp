@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Card Game</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Card Game</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="personal.html">游戏介绍</a></li>
+          <li><a href="character.html">英灵列表</a></li>
+          <li>
+            <a href="addCharacter.html">抽卡界面</a>
+          </li>
+          <li><a href="addMoney.html">氪金界面</a></li>
+          <li class="active"><a href="fight.html">战斗界面</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1>战斗界面</h1>
+  <div class="showMessage">
+      <div>
+        <p>status: <span id="status"></span></p>
+      </div>
+      <div>
+          <p>character num: <span id="charactorNum"></span></p>
+        </div>
+      <div>
+        <p>food: <span id="foodNum"></span></p>
+      </div>
+    </div>
+  <br><br><br>
+  <div class="col-lg-3"></div>
+  <div class="col-lg-3">
+    <div class="row">
+      <p>请输入出战的英灵的编号：</p>
+    </div>
+    <div class="row">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="1" id="characterChooseNum">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onclick="App.chooseCharacter()" id="characterChooseBtn">Go!</button>
+        </span>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>编号：<span id="number"></span></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>等级：<span id="levelNum"></span></p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+          <p>职阶：<span id="type1"></span></p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+            <p>星级：<span id="myStar"></span></p>
+          </div>
+        </div>
+    <div class="row">
+      <div class="col-lg-1">
+        <p>blood: </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-6">
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+            aria-valuemax="100" style="width: 100%;" id="bloodBar">
+            <span class="sr-only">blood</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4"><span id="bloodNum">100</span></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-1">
+        <p>anger: </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-6">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"
+            id="angerBar">
+            <span class="sr-only">anger</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4"><span id="angerNum">0</span></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>card: （每个回合点击一个）</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-default" id="card1">红</button>
+      </div>
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-default" id="card2">绿</button>
+      </div>
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-default" id="card3">蓝</button>
+      </div>
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-default" disabled="disabled" id="card4">宝具</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-3">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>等级：<span id="levelNum2"></span></p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+          <p>职阶：<span id="type2"></span></p>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-lg-1">
+        <p>blood: </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-6">
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+            aria-valuemax="100" style="width: 100%;" id="bloodBar2">
+            <span class="sr-only">blood</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4"><span id="bloodNum2">100</span></div>
+    </div>
+    <br><br>
+    <div id="fightDetail">
+        
+    </div>
+    <div class="row">
+      <img id="enemyPic"/>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

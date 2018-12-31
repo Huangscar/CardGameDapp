@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<title>抽卡</title>
+</head>
+<body id="bodyID">
+		<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="/">Card Game</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li ><a href="personal.html">游戏介绍</a></li>
+					<li><a href="character.html">英灵列表</a></li>
+					<li class="active">
+						<a href="addCharacter.html">抽卡界面</a>
+					</li>
+					<li ><a href="addMoney.html">氪金界面</a></li>
+					<li><a href="fight.html">战斗界面</a></li>
+				  </ul>
+				</div>
+				</div>
+			  </nav> 
+<div>
+	<h1 id="title">抽卡</h1>
+</div>
+<div class="showMessage">
+	<div>
+		<p>status: <span id="status"></span></p>
+	</div>
+	<div>
+		<p>balance: <span id="balances"></span></p>
+	</div>
+	<div>
+		<p>character num: <span id="charactorNum"></span></p>
+	</div>
+	<div>
+		<p>recent character: </p>
+		<div class="detail">
+			<p>level: <span id="recentCharacterLevel"></span></p>
+			<p>type: <span id="recentCharacterType"></span></p>
+			<p>star: <span id="recentCharacterStar"></span></p>
+		</div>
+
+	</div>
+
+</div>
+<div class="container">
+	<section class="slider">
+		<div class="slide slide--current" data-content="content-1">
+			<div class="slide__mover">
+				<div class="zoomer flex-center">
+					<div class="zoomer__image" /></div>
+					<div class="preview">
+						<h2 id="hintText1">五星、四星、三星卡池</h2>
+						<div class="leftImage" /></div>
+						<div class="rightImage" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="slide__title">
+				<div class="wrapper">
+					<a onClick="App.addCharacter(0)" class="button2">单抽</a>
+				</div>
+			</div>
+		</div>
+		<div class="slide" data-content="content-2">
+			<div class="slide__mover">
+				<div class="zoomer flex-center">
+					<div class="zoomer__image" /></div>
+					<div class="preview">
+						<h2 id="hintText2">三星、二星、一星卡池</h2>
+						<div class="leftImage" /></div>
+						<div class="rightImage" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="slide__title">
+				<div class="wrapper">
+					<a class="button2" onClick="App.addCharacter(1)">单抽</a>
+				</div>
+			</div>
+		</div>
+		
+		<nav class="slider__nav">
+			<button class="button button--nav-prev"><ion-icon name="arrow-round-back" class="leftButton"></ion-icon><span class="text-hidden">Previous product</span></button>
+			<button class="button button--nav-next"><ion-icon name="arrow-round-forward"></ion-icon><span class="text-hidden">Next product</span></button>
+		</nav>
+	</section>
+	
+</div>
+<script src="./app.js"></script>
+<script src="./classie.js"></script>
+<script src="dynamics.js"></script>
+<script src="./main.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+
+
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Card Game</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="/" >Card Game</a>
+				</div>
+				<div>
+				  <ul class="nav navbar-nav">
+					<li ><a href="personal.html">游戏介绍</a></li>
+					<li class="active"><a href="character.html">英灵列表</a></li>
+					<li >
+						<a href="addCharacter.html">抽卡界面</a>
+					</li>
+					<li ><a href="addMoney.html">氪金界面</a></li>
+					<li ><a href="fight.html">战斗界面</a></li>
+				  </ul>
+				</div>
+				</div>
+			  </nav>
+  <h1>英灵列表</h1>
+  <div class="showMessage">
+      <div>
+        <p>status: <span id="status"></span></p>
+      </div>
+      <div>
+          <p>character num: <span id="charactorNum"></span></p>
+        </div>
+        <div>
+            <p>food: <span id="foodNum"></span></p>
+          </div>
+      
+    
+    </div>
+  <br><br>
+  <div id="showCharacterDiv">
+      <div class="row">
+          <div class="col-lg-3"></div>
+            <div class="col-lg-2">
+                 <div class="thumbnail">
+                    <img >
+                    <div class="caption">
+                        <h3 id="star1"></h3>
+                        <p id="detail1"></p>
+                        <p>
+                            <a class="btn btn-primary" role="button" onclick="App.addLevel(1)">
+                                升级
+                            </a> 
+                            <a class="btn btn-default" role="button">
+                                详情
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="thumbnail">
+                    <img >
+                    <div class="caption">
+                        <h3 id="star2"></h3>
+                        <p id="detail2"></p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button" onclick="App.addLevel(2)">
+                                升级
+                            </a> 
+                            <a href="#" class="btn btn-default" role="button">
+                                详情
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="thumbnail">
+                    <img >
+                    <div class="caption">
+                        <h3 id="star3"></h3>
+                        <p id="detail3"></p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button" onclick="App.addLevel(3)">
+                                升级
+                            </a> 
+                            <a href="#" class="btn btn-default" role="button">
+                                详情
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+  </div>
+  
+
+  <script src="./app.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Card Game</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Card Game</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li ><a href="personal.html">游戏介绍</a></li>
+            <li><a href="character.html">英灵列表</a></li>
+            <li>
+                <a href="addCharacter.html">抽卡界面</a>
+            </li>
+            <li class="active"><a href="addMoney.html">氪金界面</a></li>
+            <li><a href="fight.html">战斗界面</a></li>
+          </ul>
+        </div>
+        </div>
+      </nav>      
+  <h1>氪金界面</h1>
+  <div class="showMessage">
+      <div>
+        <p>status: <span id="status"></span></p>
+      </div>
+      <div>
+        <p>balance: <span id="balances"></span></p>
+      </div>
+      <div>
+          <p>food: <span id="foodNum"></span></p>
+        </div>
+    
+    </div>
+    <br><br><br><br><br>
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+          <p>请输入你想氪的金额：（氪金数额为整数，氪石头）</p>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="1" id="moneyNum">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" onclick="App.addBalance()">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <p>请输入你想氪的金额：（氪金数额为整数，氪升级材料）</p>
+        </div>
+        <div class="col-lg-4"></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="1" id="moneyNum2">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" onclick="App.addFood()">Go!</button>
+              </span>
+            </div><!-- /input-group -->
+          </div>
+          <div class="col-lg-4"></div>
+      </div><!-- /.row -->
+</body>
+<script src="./app.js"></script>
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

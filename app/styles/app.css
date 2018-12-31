@@ -1,0 +1,281 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@font-face {
+	font-family: 'bpicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/bpicons/bpicons.eot');
+	src: url('../fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/bpicons/bpicons.woff') format('woff'),
+	url('../fonts/bpicons/bpicons.ttf') format('truetype'),
+  url('../fonts/bpicons/bpicons.svg#bpicons') format('svg');
+}
+.navbar-default {
+	background-color: #222125;
+	border-color: #cecece;
+  }
+  .navbar-default .navbar-brand {
+	color: #ecf0f1;
+  }
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+	color: #85848a;
+  }
+  .navbar-default .navbar-text {
+	color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav > li > a {
+	color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+	color: #85848a;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+	color: #85848a;
+	background-color: #cecece;
+  }
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+	color: #85848a;
+	background-color: #cecece;
+  }
+  .navbar-default .navbar-toggle {
+	border-color: #cecece;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+	background-color: #cecece;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+	border-color: #ecf0f1;
+  }
+  .navbar-default .navbar-link {
+	color: #ecf0f1;
+  }
+  .navbar-default .navbar-link:hover {
+	color: #85848a;
+  }
+  
+  @media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	  color: #ecf0f1;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+	  color: #85848a;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+	  color: #85848a;
+	  background-color: #cecece;
+	}
+  }
+
+html,
+body {
+  font-family: "Avenir", 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: #222125;
+  color: #cecece;
+  
+  font-size: 100%;
+}
+
+h1 {
+  text-align: left;
+	  margin: 80px 0px 0px 300px;
+	  font-size: 50px;
+  }
+
+  .showMessage {
+    position: absolute;
+    top: 280px;
+    left: 50px;
+    border: #cecece solid;
+    padding: 20px;
+    }
+    .detail {
+    position: relative;
+    left: 30px;
+    }
+
+    .ai-element{
+      --uiaiElementDisplay: var(--aiElementDisplay, inline-flex);	
+      --uiaiElementTextColor: var(--aiElementTextColor);
+      --uiaiElementTextColorHover: var(--aiElementTextColorHover);	
+    
+      display: var(--uiaiElementDisplay);
+      color: var(--uiaiElementTextColor);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ai-element__label{
+      display: block;
+    }
+    
+    /* ai-element_padding-all */ 
+    
+    .ai-element_padding-all{
+      --uiaiElementLineWeight: var(--aiElementLineWeight, 2px);
+      --uiaiElementLineColor: var(--aiElementLineColor, #000);
+      --uiaiElementPadding: var(--aiElementPadding, 5px);
+    
+      padding: var(--uiaiElementPadding);
+    }
+    
+    .ai-element_padding-all::before, 
+    .ai-element_padding-all::after{
+      width: 100%;
+      height: var(--uiaiElementLineWeight);
+      left: 0;
+    }
+    
+    .ai-element_padding-all::before{
+      top: 0;
+    }
+    
+    .ai-element_padding-all::after{
+      bottom: 0;
+    }
+    
+    .ai-element_padding-all .ai-element__label::before,
+    .ai-element_padding-all .ai-element__label::after{
+      width: var(--uiaiElementLineWeight);
+      height: 100%;
+      top: 0;
+    }
+    
+    .ai-element_padding-all .ai-element__label::before{
+      left: 0;
+    }
+    
+    .ai-element_padding-all .ai-element__label::after{
+      right: 0;
+    }
+    
+    .ai-element_padding-all::before,
+    .ai-element_padding-all::after,
+    .ai-element_padding-all .ai-element__label::before,
+    .ai-element_padding-all .ai-element__label::after{
+      content: "";     
+      background-color: var(--uiaiElementLineColor);
+      position: absolute; 
+      opacity: 1;
+    
+      will-change: transform, opacity;
+      transition-property: transform, opacity;
+    }
+    
+    .ai-element_padding-all:hover::before,
+    .ai-element_padding-all:hover::after,
+    .ai-element_padding-all:hover .ai-element__label::before,
+    .ai-element_padding-all:hover .ai-element__label::after{
+      opacity: 0;
+    }
+    
+    /* ai-element_padding-bottom */ 
+    
+    .ai-element_padding-bottom{
+      --uiaiElementLineWeight: var(--aiElementLineWeight, 2px);
+      --uiaiElementLineColor: var(--aiElementLineColor, #000);	
+    
+      padding-bottom: var(--uiaiElementLineWeight);	
+      position: relative;
+    }
+    
+    .ai-element_padding-bottom::after{
+      content: "";
+      width: 100%;
+      height: var(--uiaiElementLineWeight);
+      background-color: var(--uiaiElementLineColor);
+    
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    
+    /* ai-element_bg */ 
+    
+    .ai-element_bg {
+      --uiaiElementLineColor: var(--aiElementLineColor, #000);	
+      --uiaiElementTextColor: var(--aiElementTextColor, #fff);
+      --uiaiElementTextColorHover: var(--aiElementTextColorHover, #000);
+      --uiaiElementPadding: var(--aiElementPadding, 5px);
+    
+      padding: var(--uiaiElementPadding);
+      transition: color .3s ease-out;
+    }
+    
+    .ai-element_bg::before, 
+    .ai-element_bg::after{
+      content: "";
+      background-color: var(--uiaiElementLineColor);	
+      opacity: 1;
+      position: absolute;
+    
+      transition: transform .35s ease-out, opacity .35s ease-out .03s;
+    }
+    
+    .ai-element_bg .ai-element__label{
+      position: relative;
+      z-index: 2;
+    }
+    
+    .ai-element_bg:hover::before, 
+    .ai-element_bg:hover::after{
+      opacity: 0;
+      transition-delay: 0s;
+    }
+    
+    .ai-element_bg:hover{
+      color: var(--uiaiElementTextColorHover);
+    }
+    
+    /* ai-element_text */ 
+    
+    .ai-element_text::before{
+      content: attr(data-ai-element-text);
+      color: var(--uiaiElementTextColorHover);
+      position: absolute;
+    }
+    
+    .ai-element_text::before, 
+    .ai-element_text .ai-element__label{
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(.86, .6, .08, 1.01); 
+      transition-duration: .4s;
+    }
+    
+    .ai-element_text:hover::before,
+    .ai-element_text:hover .ai-element__label{
+      transition-duration: .3s;
+    }
+
+    .ai-element2::after{
+      transform: translate3d(0, 0, 0);
+      transition: transform .2s ease-in;
+    }
+    
+    .ai-element2:hover::after{
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    .ai-element{
+      --aiElementPadding: 10px 15px;
+      --aiElementLineWeight: 5px;
+      --aiElementLineColor: #243aab;
+      --aiElementTextColor: #1b255a;
+      --aiElementTextColorHover: #243aab;
+    }
+    
+    .ai-element_bg{
+      --aiElementTextColor: #fff;
+    }
